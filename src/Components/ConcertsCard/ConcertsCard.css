@@ -1,0 +1,54 @@
+.scrollable-widget {
+  height: 30rem;
+  width: 20rem;
+  overflow-y: auto;
+  border-radius: 1rem 0 0 1rem;
+  background-color: rgba(130, 130, 130, 0.6);
+  padding: 1rem;
+  margin: 0 0 0 1rem;
+}
+
+.event-name {
+  text-transform: capitalize;
+}
+
+.date-and-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tickets-button {
+  background-color: gray;
+  padding: 0.5rem;
+  border-radius: 1rem;
+
+}
+
+.ticket-logo {
+  width: 2rem;
+  height: 2rem;
+  padding: 0.25rem;
+  color: rgb(220, 255, 45);
+}
+
+
+/* The scrollbar track */
+.scrollable-widget::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+  
+/* The scrollbar handle */
+.scrollable-widget::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+  
+/* On hover, the handle changes color */
+.scrollable-widget::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* The scrollbar itself */
+.scrollable-widget::-webkit-scrollbar {
+  width: 10px; /* Adjust as needed */
+}

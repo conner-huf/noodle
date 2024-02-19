@@ -1,0 +1,40 @@
+.artist-card-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(130, 130, 130, 0.6);
+    border-radius: 1rem;
+}
+
+.searched-artist-picture {
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+}
+
+.searched-artist-name {
+    color: black;
+    word-wrap: break-word;
+    padding: 1rem 0;
+}
+
+.searched-artist-spotify-link {
+    aspect-ratio: 1/1;
+    border-radius: 1rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 1rem 0;
+}
+
+.searched-artist-spotify-link:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+.spotify-logo {
+    width: 3.5rem;
+    height: 2.5rem;
+    color: rgb(45, 224, 45)
+}

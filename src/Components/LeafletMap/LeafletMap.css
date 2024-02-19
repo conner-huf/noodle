@@ -1,0 +1,6 @@
+.map-container {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    border: 5px solid #000;
+}
