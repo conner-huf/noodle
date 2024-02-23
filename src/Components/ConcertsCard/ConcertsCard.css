@@ -1,37 +1,61 @@
 .scrollable-widget {
-  height: 30rem;
-  width: 20rem;
+  height: inherit;
+  width: 20vw;
   overflow-y: auto;
-  border-radius: 1rem 0 0 1rem;
-  background-color: rgba(130, 130, 130, 0.6);
-  padding: 1rem;
+  border-radius: .4rem 0 0 .4rem;
+  background-color: rgba(253, 253, 253, 0.521);
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.4);
+
   margin: 0 0 0 1rem;
+}
+.concert-event {
+  padding: 1rem 0;
 }
 
 .event-name {
   text-transform: capitalize;
+  padding-left: 1rem;
 }
 
 .date-and-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1rem;
 }
 
 .tickets-button {
   background-color: gray;
   padding: 0.5rem;
-  border-radius: 1rem;
+  border-radius: .4rem;
 
 }
 
 .ticket-logo {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   padding: 0.25rem;
   color: rgb(220, 255, 45);
 }
 
+.concert-event.selected {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.concert-event:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.concert-card-filter-and-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-dropdown {
+  width: 15vw;
+}
 
 /* The scrollbar track */
 .scrollable-widget::-webkit-scrollbar-track {

@@ -1,24 +1,39 @@
 .main-content-container {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space;
     align-items: center;
+    border-radius: .4rem;
+    margin: 0 1rem;
+    padding: 1rem 0;
+
+    background-color: rgba(0, 0, 0, 0);
+    
 }
 
-.main-content-display {
+.sidebar {
+    display: flex;
+    height: 85vh;
+    width: 25vw;
+}
+
+.main-display {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
-    padding: 1rem;
-    background-color: gray;
-    border-radius: 1rem;
+    padding: .5rem;
+    background-color: rgba(94, 94, 94, 0.527);
+    border-radius: .4rem;
+    width: 70vw;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.4);
 }
 
 .searched-artist-picture {
-    border-radius: 1rem;
+    border-radius: .4rem;
 }
 
 .searched-artist-name {
@@ -27,7 +42,7 @@
 
 .searched-artist-spotify-link {
     aspect-ratio: 1/1;
-    border-radius: 1rem;
+    border-radius: .4rem;
     border: none;
 }
 

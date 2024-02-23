@@ -1,23 +1,30 @@
 import React, { useState } from 'react';
 import './Header.css';
 
-function Header({ setArtistName }) {
-  const [inputValue, setInputValue] = useState('');
+function Header({ setArtistName, setCity }) {
+  const [artistValue, setArtistValue] = useState('');
+  const [cityValue, setCityValue] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleArtistSubmit = (event) => {
     event.preventDefault();
-    setArtistName(inputValue);
+    setArtistName(artistValue);
+  };
+
+  const handleCitySubmit = (event) => {
+    event.preventDefault();
+    setCity(cityValue);
   };
 
   return (
     <div className='search-boxes'>
-      <form className="search-form" onSubmit={handleSubmit}>
+      <form className="city-form" onSubmit={handleCitySubmit}>
         <input
           type="text"
-          value={inputValue}
-          onChange={(event) => setInputValue(event.target.value)}
+          value={cityValue}
+          onChange={(event) => setCityValue(event.target.value)}
+          placeholder="City"
         />
-        <button type="submit">Search</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );

@@ -1,6 +1,7 @@
-.map-container {
-    width: 500px;
-    height: 500px;
-    position: relative;
-    border: 5px solid #000;
+/* sizing */
+
+.leaflet-container {
+    height: 85vh;
+    width: 70vw;
+    border-radius: .4rem;
 }

@@ -4,3 +4,24 @@
     align-items: center;
     margin: 1rem 0;
 }
+
+.city-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.city-form input {
+    width: 20rem;
+    height: 2rem;
+    border-radius: .5rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+}
+
+.city-form button {
+    width: 5rem;
+    height: 2rem;
+    border-radius: .5rem;
+}

@@ -1,34 +1,57 @@
 import React, { useEffect, useState } from 'react';
 import './Main.css';
 
-import { ArtistCard } from '../ArtistCard/ArtistCard';
-import { ConcertsCard } from '../ConcertsCard/ConcertsCard';
+import {ConcertsCard} from '../ConcertsCard/ConcertsCard';
+import LeafletMap from '../LeafletMap/LeafletMap';
 
-function Main({ artistName }) {
-  const [spotifyData, setSpotifyData] = useState(null);
+function Main({ city }) {
   const [concertData, setConcertData] = useState([]);
+  const [selectedConcert, setSelectedConcert] = useState(null);
+
+  const selectConcert = (concert) => {
+    setSelectedConcert(concert);
+  }
 
   useEffect(() => {
     setConcertData([]);
-
-    if (artistName) {
-      fetch(`http://localhost:5000/spotify_data/${encodeURIComponent(artistName)}`)
-        .then(response => response.json())
-        .then(data => setSpotifyData(data));
-
-      fetch(`http://localhost:5000/concert_data/${encodeURIComponent(artistName)}`)
+    // retrieve data from backend when city changes
+    if (city) {
+      fetch(`http://localhost:5000/concert_data_city/${city}`)
         .then(response => response.json())
         .then(data => {
-          console.log(data);
-          setConcertData(data);
+          const formattedData = data.map(concert => {
+
+            const name = concert._embedded?.attractions?.[0]?.name || '';
+            const genre = concert.classifications?.[0]?.genre?.name || '';
+            const venue = concert._embedded?.venues?.[0]?.name || '';
+            const location = concert._embedded?.venues?.[0]?.location || '';
+            const date = concert.dates?.start?.localDate || '';
+            const url = concert._embedded?.attractions?.[0]?.url || '';
+
+            return {
+              // include only the properties you care about
+              name,
+              genre,
+              venue,
+              location,
+              date,
+              url
+            };
+          });
+        console.log(formattedData);
+        setConcertData(formattedData);
         });
     }
-  }, [artistName]);
+  }, [city]);
 
   return (
     <div className='main-content-container'>
-      {spotifyData && <ArtistCard data={spotifyData} />}
-      {concertData && <ConcertsCard data={concertData} />}
+      <div className='sidebar'>
+        { concertData && <ConcertsCard data={concertData} selectedConcert={selectedConcert} selectConcert={selectConcert}/> }
+      </div>
+      <div className='main-display'>
+        <LeafletMap concertData={concertData} setSelectedConcert={setSelectedConcert} />
+      </div>
     </div>
   );
 }

@@ -1,37 +1,34 @@
-import React, { useEffect } from 'react';
-import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet';
+import React from 'react'
+import "leaflet/dist/leaflet.css";
+import { MapContainer, TileLayer } from "react-leaflet";
+import MapMarker from '../MapMarker/MapMarker';
+import MarkerClusterGroup from 'react-leaflet-cluster';
 
-import './LeafletMap.css';
+import './LeafletMap.css'
 
-function ChangeView({ center, zoom }) {
-    const map = useMap();
-    map.setView(center, zoom);
-    useEffect(() => {
-      map.invalidateSize();
-    }, []);
-    return null;
-}
-
-const LeafletMap = () => {
-  const position = [51.505, -0.09]; // Default position [lat, lng]
+const LeafletMap = ({ concertData, setSelectedConcert }) => {
 
   return (
-    <div className='map-container'>
-        <MapContainer center={position} zoom={13} maxBounds={[[-90, -180],[90, 180]]}>
-        <ChangeView center={position} zoom={13} />
-        <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            noWrap={true}
-        />
-        <Marker position={position}>
-            <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-        </Marker>
-        </MapContainer>
-    </div>
-  );
+    <MapContainer center={[34.052, -118.243]} zoom={9}>
+      <TileLayer 
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      <MarkerClusterGroup chunkedLoading>
+      {concertData.flatMap((concert, index) => {
+        if (concert.name === '') {
+          return null;
+        }
+        const marker = {
+          geoCode: [concert.location.latitude, concert.location.longitude],
+          name: concert.name,
+          url: concert.url
+        };
+        return <MapMarker key={index} marker={marker} setSelectedConcert={() => setSelectedConcert(concert)} />;
+      })}
+      </MarkerClusterGroup>
+    </MapContainer>
+  )
 }
 
-export default LeafletMap;
+export default LeafletMap

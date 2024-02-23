@@ -6,11 +6,12 @@ import Main from './Components/Main/Main';
 
 function App() {
   const [artistName, setArtistName] = useState(null);
+  const [city, setCity] = useState(null);
 
   return (
     <div>
-      <Header setArtistName={setArtistName} />
-      <Main artistName={artistName} />
+      <Header setArtistName={setArtistName} setCity={setCity} />
+      <Main artistName={artistName} city={city} />
     </div>
   );
 }

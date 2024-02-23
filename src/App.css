@@ -1,4 +1,9 @@
 .App {
   text-align: center;
+  box-sizing: 0;
+  padding: 0;
 }
 
+body {
+  background-image: radial-gradient(rgb(18, 116, 133), rgb(81, 199, 219));
+}
