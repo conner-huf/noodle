@@ -12,11 +12,13 @@ function Main({ city }) {
     setSelectedConcert(concert);
   }
 
+  const BASE_URL = 'https://noodle-backend-221e49e8efe6.herokuapp.com';
+
   useEffect(() => {
     setConcertData([]);
     // retrieve data from backend when city changes
     if (city) {
-      fetch(`http://localhost:5000/concert_data_city/${city}`)
+      fetch(`${BASE_URL}/concert_data_city/${city}`)
         .then(response => response.json())
         .then(data => {
           const formattedData = data.map(concert => {

@@ -7,11 +7,13 @@ export const ArtistCard = ({ artistName }) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
+  const BASE_URL = 'https://noodle-backend-221e49e8efe6.herokuapp.com';
+
   useEffect(() => {
 
     console.log("ArtistCard: ", artistName)
 
-    fetch(`http://localhost:5000/spotify_data/${encodeURIComponent(artistName)}`)
+    fetch(`${BASE_URL}/spotify_data/${encodeURIComponent(artistName)}`)
       .then(response => response.json())
       .then(data => {
         if (!data.name || !data.images || !data.external_urls.spotify ) {
