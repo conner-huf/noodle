@@ -18,6 +18,13 @@
 
   margin: 0;
 }
+
+.no-concerts-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .concert-event {
   padding: .5rem 0;
 }
@@ -78,4 +85,15 @@
 /* The scrollbar itself */
 .scrollable-widget::-webkit-scrollbar {
   width: 10px; /* Adjust as needed */
+}
+
+@media (max-width: 1000px) {
+  .leaflet-container {
+    width: 0vw;
+  }
+
+  .scrollable-widget {
+    box-shadow: none;
+    background-color: rgba(253, 253, 253, 0.75);
+  }
 }

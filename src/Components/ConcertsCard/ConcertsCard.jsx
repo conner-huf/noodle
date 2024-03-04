@@ -9,7 +9,7 @@ export const ConcertsCard = ({ data, selectedConcert, setSelectedConcert }) => {
   if (data.length === 0) {
     return (
       <div className="scrollable-widget">
-        <p>No concerts found</p>
+        <p className="no-concerts-found">No concerts found</p>
       </div>
     )
   }

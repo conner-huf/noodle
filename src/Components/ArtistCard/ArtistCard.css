@@ -48,3 +48,23 @@
     height: 2.5rem;
     color: rgb(45, 224, 45)
 }
+
+@media (max-width: 1000px) {
+    .artist-card-container {
+        width: 200px;
+        height: 350px;
+    }
+
+    .searched-artist-picture {
+        max-height: 200px;
+    }
+
+    .spotify-logo {
+        width: 2rem;
+        height: 1.5rem;
+    }
+
+    .searched-artist-name {
+        font-size: 1rem;
+    }
+}

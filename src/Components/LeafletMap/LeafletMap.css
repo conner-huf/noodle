@@ -5,3 +5,9 @@
     width: 70vw;
     border-radius: .4rem;
 }
+
+@media (max-width: 1000px) {
+    .leaflet-container {
+      width: 100vw;
+    }
+  }

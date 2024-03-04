@@ -55,3 +55,24 @@
 .searched-artist-spotify-link:hover {
     background-color: rgba(175, 175, 175, 0.8);
 }
+
+@media (max-width: 1000px) {
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 10vh;
+      height: 100%;
+      z-index: 9999;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-out;
+    }
+
+    .main-display {
+        width: 100%;
+        transition: transform 0.3s ease-out;
+    }
+  
+    .sidebar.active {
+        transform: translateX(0);
+    }
+  }

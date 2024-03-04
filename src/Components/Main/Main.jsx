@@ -4,7 +4,7 @@ import './Main.css';
 import {ConcertsCard} from '../ConcertsCard/ConcertsCard';
 import LeafletMap from '../LeafletMap/LeafletMap';
 
-function Main({ city }) {
+function Main({ city, sidebarActive }) {
   const [concertData, setConcertData] = useState([]);
   const [selectedConcert, setSelectedConcert] = useState(null);
 
@@ -43,15 +43,9 @@ function Main({ city }) {
     }
   }, [city]);
 
-  useEffect(() => {
-    if (selectedConcert) {
-      console.log(selectedConcert);
-    }
-  }, [selectedConcert]);
-
   return (
     <div className='main-content-container'>
-      <div className='sidebar'>
+      <div className={`sidebar ${sidebarActive ? 'active' : ''}`}>
         { concertData && <ConcertsCard data={concertData} selectedConcert={selectedConcert} setSelectedConcert={setSelectedConcert}/> }
       </div>
       <div className='main-display'>

@@ -14,7 +14,6 @@ const MapMarker = ({ marker, setSelectedConcert, selectedConcert }) => {
   })
 
   const handleClick = (e) => {
-    e.originalEvent.stopPropagation();
     setSelectedConcert(marker);
   }
 

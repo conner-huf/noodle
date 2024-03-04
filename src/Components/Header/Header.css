@@ -1,8 +1,13 @@
-.search-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+.sidebar-button {
+    display: none;
+    color: black;
+}
+
+.sidebar-button:visited,
+.sidebar-button:hover,
+.sidebar-button:active,
+.sidebar-button:focus {
+  color: black;
 }
 
 .city-form {
@@ -27,4 +32,27 @@
     border-radius: .5rem;
     margin-left: 1rem;
     border: 1px solid black;
+}
+
+@media (max-width: 1000px) {
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .sidebar-button {
+        margin-left: 1rem;
+        display: flex;
+        width: 2rem;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        background: none;
+        border: none;
+    }
+
+    .city-form {
+        margin: 0 1rem 0 0;
+    }
+
 }
