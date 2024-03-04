@@ -55,4 +55,12 @@
         margin: 0 1rem 0 0;
     }
 
+    .city-form input {
+        width: 50vw;
+    }
+
+    .city-form button {
+        width: 4rem;
+    }
+
 }
