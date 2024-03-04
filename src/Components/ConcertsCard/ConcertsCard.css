@@ -95,5 +95,8 @@
   .scrollable-widget {
     box-shadow: none;
     background-color: rgba(253, 253, 253, 0.75);
+    width: 325px;
+    margin: 0;
+    padding: 0;
   }
 }
