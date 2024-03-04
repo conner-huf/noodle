@@ -100,3 +100,13 @@
     padding: 0;
   }
 }
+
+@media (max-width: 400px) {
+  .scrollable-widget {
+    box-shadow: none;
+    background-color: rgba(253, 253, 253, 0.75);
+    width: 250px;
+    margin: 0;
+    padding: 0;
+  }
+}

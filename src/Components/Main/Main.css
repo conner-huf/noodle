@@ -79,3 +79,18 @@
         transform: translateX(0);
     }
   }
+
+  @media (max-width: 1000px) {
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 10vh;
+      width: 250px;
+      height: 100%;
+      z-index: 9999;
+      transform: translateX(-110%);
+      transition: transform 0.4s ease-out;
+      margin: 0;
+      padding: 0;
+    }
+}
