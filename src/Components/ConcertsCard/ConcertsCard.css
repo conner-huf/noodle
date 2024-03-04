@@ -1,15 +1,25 @@
+.concert-card-filter-and-display {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0 .5rem;
+}
+
 .scrollable-widget {
-  height: inherit;
-  width: 20vw;
+  height: 100%;
+  width: 100%;
   overflow-y: auto;
   border-radius: .4rem 0 0 .4rem;
   background-color: rgba(253, 253, 253, 0.521);
   box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.4);
 
-  margin: 0 0 0 1rem;
+  margin: 0;
 }
 .concert-event {
-  padding: 1rem 0;
+  padding: .5rem 0;
 }
 
 .event-name {
@@ -46,15 +56,8 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.concert-card-filter-and-display {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .filter-dropdown {
-  width: 15vw;
+  width: 100%;
 }
 
 /* The scrollbar track */

@@ -8,9 +8,6 @@ function Main({ city }) {
   const [concertData, setConcertData] = useState([]);
   const [selectedConcert, setSelectedConcert] = useState(null);
 
-  const selectConcert = (concert) => {
-    setSelectedConcert(concert);
-  }
 
   const BASE_URL = 'https://noodle-backend-221e49e8efe6.herokuapp.com';
 
@@ -46,13 +43,19 @@ function Main({ city }) {
     }
   }, [city]);
 
+  useEffect(() => {
+    if (selectedConcert) {
+      console.log(selectedConcert);
+    }
+  }, [selectedConcert]);
+
   return (
     <div className='main-content-container'>
       <div className='sidebar'>
-        { concertData && <ConcertsCard data={concertData} selectedConcert={selectedConcert} selectConcert={selectConcert}/> }
+        { concertData && <ConcertsCard data={concertData} selectedConcert={selectedConcert} setSelectedConcert={setSelectedConcert}/> }
       </div>
       <div className='main-display'>
-        <LeafletMap concertData={concertData} setSelectedConcert={setSelectedConcert} />
+        <LeafletMap concertData={concertData} setSelectedConcert={setSelectedConcert} selectedConcert={selectedConcert} />
       </div>
     </div>
   );

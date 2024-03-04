@@ -2,11 +2,14 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space;
+    justify-content: center;
     align-items: center;
     border-radius: .4rem;
-    margin: 0 1rem;
-    padding: 1rem 0;
+    margin: 0;
+    padding: 0;
+
+    width: 99vw;
+    height: 90vh;
 
     background-color: rgba(0, 0, 0, 0);
     
@@ -14,8 +17,10 @@
 
 .sidebar {
     display: flex;
-    height: 85vh;
-    width: 25vw;
+    height: 100%;
+    width: 30%;
+    margin: 0;
+    padding: 0;
 }
 
 .main-display {
@@ -25,10 +30,11 @@
     justify-content: center;
     align-items: center;
 
-    padding: .5rem;
+    padding: 0;
     background-color: rgba(94, 94, 94, 0.527);
     border-radius: .4rem;
-    width: 70vw;
+    width: 70%;
+    height: 100%;
     box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.4);
 }
 

@@ -3,7 +3,7 @@ import './ConcertsCard.css'
 import { IoTicket } from "react-icons/io5";
 
 
-export const ConcertsCard = ({ data, selectedConcert, selectConcert }) => {
+export const ConcertsCard = ({ data, selectedConcert, setSelectedConcert }) => {
   const [sortOption, setSortOption] = useState('date');
 
   if (data.length === 0) {
@@ -32,7 +32,7 @@ export const ConcertsCard = ({ data, selectedConcert, selectConcert }) => {
           <div 
           className={`concert-event ${event === selectedConcert ? 'selected' : ''}`} 
           key={index}
-          onClick={() => selectConcert(event)}
+          onClick={() => setSelectedConcert(event)}
           >
             <h4 className="event-name">{event.name}</h4>
             <div className='date-and-button'>

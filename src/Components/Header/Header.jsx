@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
 import './Header.css';
 
-function Header({ setArtistName, setCity }) {
-  const [artistValue, setArtistValue] = useState('');
+function Header({ setCity }) {
   const [cityValue, setCityValue] = useState('');
-
-  const handleArtistSubmit = (event) => {
-    event.preventDefault();
-    setArtistName(artistValue);
-  };
 
   const handleCitySubmit = (event) => {
     event.preventDefault();
