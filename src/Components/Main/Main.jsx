@@ -8,8 +8,17 @@ function Main({ city, sidebarActive }) {
   const [concertData, setConcertData] = useState([]);
   const [selectedConcert, setSelectedConcert] = useState(null);
 
+  // -------------------------------------- //
 
   const BASE_URL = 'https://noodle-backend-221e49e8efe6.herokuapp.com';
+
+  // -------------------------------------- //
+  // The above line is for production, the below line is for local development.
+  // -------------------------------------- //
+
+  // const BASE_URL = 'http://localhost:5000'
+
+  // -------------------------------------- //
 
   useEffect(() => {
     setConcertData([]);
