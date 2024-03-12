@@ -29,8 +29,8 @@ export const ConcertsCard = ({ data, selectedConcert, setSelectedConcert }) => {
       </select>
       <div className="scrollable-widget">
         {sortedData.map((event, index) => (
-          <div 
-          className={`concert-event ${event === selectedConcert ? 'selected' : ''}`} 
+          <div
+          className={`concert-event ${event === selectedConcert ? 'selected' : ''}`}
           key={index}
           onClick={() => setSelectedConcert(event)}
           >

@@ -48,7 +48,7 @@ export const ArtistCard = ({ artistName }) => {
         </button>
       </a>
     </div>
-    
+
   </div>
   )
 }
