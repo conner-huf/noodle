@@ -2,12 +2,12 @@
 
 .leaflet-container {
     height: 90vh;
-    width: 70vw;
+    width: 69vw;
     border-radius: .4rem;
 }
 
 @media (max-width: 1000px) {
     .leaflet-container {
-      width: 100vw;
+      width: 98vw;
     }
   }

@@ -1,3 +1,13 @@
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(253, 253, 253, 0.5);
+    margin: .25vh .5vw 0 .5vw;
+    border-radius: 1rem;
+}
+
 .sidebar-button {
     display: none;
     color: black;
@@ -46,10 +56,11 @@
     .header-container {
         display: flex;
         justify-content: space-between;
+        margin: .25rem 0 0 .25rem;
     }
-    
+
     .sidebar-button {
-        margin-left: 1rem;
+        margin-left: .5rem;
         display: flex;
         width: 2rem;
         justify-content: center;
@@ -60,7 +71,7 @@
     }
 
     .city-form {
-        margin: 0 1rem 0 0;
+        margin: 0 .5rem 0 0;
     }
 
     .city-form input {
