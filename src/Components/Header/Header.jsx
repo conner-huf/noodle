@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 function Header({ setCity, setSidebarActive, sidebarActive }) {
   const [cityValue, setCityValue] = useState('');
@@ -28,7 +29,9 @@ function Header({ setCity, setSidebarActive, sidebarActive }) {
             onChange={(event) => setCityValue(event.target.value)}
             placeholder="City"
           />
-          <button type="submit">Submit</button>
+          <button type="submit">
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </button>
         </form>
       </div>
     </header>
