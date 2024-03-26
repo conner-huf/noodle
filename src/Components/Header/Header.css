@@ -4,7 +4,7 @@
     align-items: center;
 
     background: rgba(253, 253, 253, 0.5);
-    margin: .25vh .5vw 0 .5vw;
+    margin: .5vh .75vw 0 .75vw;
     border-radius: 1rem;
 }
 
@@ -56,7 +56,7 @@
     .header-container {
         display: flex;
         justify-content: space-between;
-        margin: .25rem 0 0 .25rem;
+        margin: .25rem .25rem 0 .25rem;
     }
 
     .sidebar-button {

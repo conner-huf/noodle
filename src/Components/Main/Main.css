@@ -18,9 +18,9 @@
 
 .sidebar {
     display: flex;
-    height: 99.5%;
+    height: 99%;
     width: 30%;
-    margin: 0;
+    margin: 0 .25rem 0 0;
     padding: 0 0.15rem;
 }
 
@@ -34,8 +34,8 @@
     padding: 0 0.15rem;
     background-color: rgba(94, 94, 94, 0.527);
     border-radius: .4rem;
-    width: 69%;
-    height: 99.5%;
+    width: 68%;
+    height: 99%;
     box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.4);
 }
 
