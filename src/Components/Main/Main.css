@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     border-radius: .4rem;
-    margin: 0;
+    margin: -.3rem 0;
     padding: .3rem;
 
     width: 99vw;
@@ -36,7 +36,7 @@
     border-radius: .4rem;
     width: 68%;
     height: 99%;
-    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.164);
 }
 
   @media (max-width: 1000px) {
