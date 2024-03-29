@@ -16,7 +16,7 @@ function ConcertsWidget({ data, selectedConcert, setSelectedConcert, isLoading }
             visible={true}
             height="50"
             width="50"
-            color="#3d3d3d"
+            color="#ffffff"
             radius="9"
             ariaLabel="three-dots-loading"
             wrapperStyle={{}}

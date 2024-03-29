@@ -16,9 +16,8 @@
   justify-content: center;
   color: black;
   font-weight: bold;
-  background: white;
+  background: rgba(255, 255, 255, 0.5);
   border-radius: .5rem .5rem 0 0;
-  border: 1px solid black;
 }
 
 .inner-widget{
@@ -28,7 +27,7 @@
     flex-direction: column;
 
     background-color: var(--sec-color);
-
+    color: var(--txt-color);
 }
 
 .scrollable-widget {
