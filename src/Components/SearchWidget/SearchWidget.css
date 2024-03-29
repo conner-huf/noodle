@@ -1,0 +1,56 @@
+.widget-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--pri-color);
+
+    border-radius: .5rem;
+}
+
+.inner-search-widget {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 1rem;
+    width: 100%;
+    height: calc(100% - 1rem);
+    background-color: var(--sec-color);
+    border-radius: .5rem;
+}
+
+.city-search-form {
+    display: flex;
+    height: 2rem;
+}
+
+.city-search-form > input {
+    border-radius: .5rem;
+    border: none;
+}
+
+.city-search-form > button {
+    margin: 0 .5rem;
+    width: 2rem;
+    background: none;
+    border-radius: .5rem;
+    border: none;
+    transition: 0.3s;
+}
+
+.city-search-form > button:hover {
+    background-color: var(--accent-color);
+}
+
+.sidebarButton {
+    font-size: 1.3rem;
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .sidebarButton {
+        display: block;
+    }
+}

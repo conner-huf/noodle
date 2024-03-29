@@ -1,0 +1,22 @@
+.widget-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #9caafc3f;
+
+    border-radius: .5rem;
+}
+
+.inner-widget {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1rem;
+    width: 100%;
+    height: calc(100% - 1rem);
+    background-color: #9caafc;
+    border-radius: .5rem;
+}

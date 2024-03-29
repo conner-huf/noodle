@@ -1,0 +1,111 @@
+.widget-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--pri-color);
+
+    border-radius: .5rem;
+}
+
+.filter-dropdown {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
+  background: white;
+  border-radius: .5rem .5rem 0 0;
+  border: 1px solid black;
+}
+
+.inner-widget{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: var(--sec-color);
+
+}
+
+.scrollable-widget {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-direction: column;
+
+    width: 100%;
+    height: calc(100% - 1rem);
+    background-color: var(--sec-color);
+    border-radius: .5rem;
+    overflow-y: auto;
+}
+
+.concert-event {
+    padding: .5rem;
+}
+
+.event-name {
+    text-transform: capitalize;
+}
+
+.date-and-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    padding: 0;
+}
+
+.tickets-button {
+    background-color: var(--pri-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: .4rem;
+}
+
+.ticket-logo {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.25rem;
+    color: var(--accent-color);
+}
+
+
+.concert-event.selected {
+    background-color: var(--select-color);
+}
+
+.concert-event:hover {
+    background-color: var(--hover-color);
+}
+
+/* The scrollbar track */
+.scrollable-widget::-webkit-scrollbar-track {
+    background: var(--scroll-track-color);
+    border-radius: 1rem;
+}
+
+/* The scrollbar handle */
+.scrollable-widget::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb-color);
+    border-radius: 1rem;
+}
+
+/* On hover, the handle changes color */
+.scrollable-widget::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-sel-color);
+
+}
+
+/* The scrollbar itself */
+.scrollable-widget::-webkit-scrollbar {
+    width: 10px;
+}
+
+@media (max-width: 900px) {
+}
