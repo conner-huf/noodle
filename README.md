@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# Noodle
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web application for finding live music performances in your area. It uses the Ticketmaster API to source tickets in the event that you find a concert you want to go to, and the Spotify API to provide artist photos and links to their music if you want to check out some of the performer's songs.
 
-## Available Scripts
+Things used in this project:
+- Python Flask (backend)
+- React.js (frontend)
+- Leaflet.js
+- Spotify API
+- Ticketmaster API
+- Heroku (to host the backend)
+- Github pages (to host the frontend)
 
-In the project directory, you can run:
+Last week, I just restructured this project and completely re-created the frontend. And the finished product looks a lot better than it did.
 
-### `npm start`
+**Some features that I have yet to implement:**
+- the Spotify API has a response for an artist's 'popularity' rated from 1 - 100. I want to make some way for the user to select, for example, less than 30, and only get concerts with a performing artist with a popularity less than 30. Or the user could select greater than 90 and they would only see concerts of really popular artists.
+- I want to make a way for the user to only see concerts happening today, this week, or this month, so the user can better narrow their search. Sometimes you just wanna go listen to live music right now.
+- There are some maps that automatically populate nearby events based on where the map is currently centered. I think this would be a cool thing to implement.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Known bugs:**
+- The map currently does not center on a city when you search it, which it should.
