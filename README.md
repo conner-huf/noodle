@@ -8,7 +8,7 @@ Things used in this project:
 - Leaflet.js
 - Spotify API
 - Ticketmaster API
-- Heroku (to host the backend)
+- ~~Heroku (to host the backend)~~
 - Github pages (to host the frontend)
 
 Last week, I just restructured this project and completely re-created the frontend. And the finished product looks a lot better than it did.
@@ -20,3 +20,6 @@ Last week, I just restructured this project and completely re-created the fronte
 
 **Known bugs:**
 - The map currently does not center on a city when you search it, which it should.
+
+### Update - 4/20/24
+Migrating to a different backend service, so will be down for a few days. 
