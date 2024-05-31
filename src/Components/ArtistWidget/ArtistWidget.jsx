@@ -8,7 +8,10 @@ function ArtistWidget({ artist }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
-  const BASE_URL = 'https://noodle-backend-221e49e8efe6.herokuapp.com';
+  const PROD_URL = 'https://noodle-backend-221e49e8efe6.herokuapp.com';
+  const DEV_URL = 'http://localhost:5000'
+
+  const BASE_URL = DEV_URL;
 
   useEffect(() => {
 
