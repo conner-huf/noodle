@@ -6,10 +6,11 @@ import MapWidget from '../MapWidget/MapWidget';
 
 export const WidgetSections = () => {
 
-  const PROD_URL = 'https://noodle-backend-221e49e8efe6.herokuapp.com';
-  const DEV_URL = 'http://localhost:5000'
+  const HEROKU_URL = 'https://noodle-backend-221e49e8efe6.herokuapp.com';
+  const AZURE_URL = 'https://noodlev1.azurewebsites.net';
+  const DEV_URL = 'http://localhost:5000';
 
-  const BASE_URL = DEV_URL;
+  const BASE_URL = AZURE_URL;
 
   const [city, setCity] = useState(null);
   const [concertData, setConcertData] = useState([]);
