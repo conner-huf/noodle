@@ -9,11 +9,10 @@ export const ArtistCardWidget = ({ artistName }) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
-  const HEROKU_URL = 'https://noodle-backend-221e49e8efe6.herokuapp.com';
   const AZURE_URL = 'https://noodlev1.azurewebsites.net';
-  const DEV_URL = 'http://localhost:5000';
+  const DEV_URL = 'http://localhost:8000/noodle';
 
-  const BASE_URL = AZURE_URL;
+  const BASE_URL = DEV_URL;
 
   useEffect(() => {
 
