@@ -8,10 +8,10 @@ function ArtistWidget({ artist }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
-  const AZURE_URL = 'https://noodlev1.azurewebsites.net';
+  const AZURE_URL = 'https://unifiedbackendwebapp-hqerfscxedd0asfj.eastus-01.azurewebsites.net/noodle';
   const DEV_URL = 'http://localhost:8000/noodle';
 
-  const BASE_URL = DEV_URL;
+  const BASE_URL = AZURE_URL;
 
   useEffect(() => {
 
