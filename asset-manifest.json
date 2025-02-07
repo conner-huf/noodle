@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/noodle/static/css/main.d104b4a3.css",
-    "main.js": "/noodle/static/js/main.20592b7f.js",
+    "main.js": "/noodle/static/js/main.ed631f6b.js",
     "static/js/453.82d5c573.chunk.js": "/noodle/static/js/453.82d5c573.chunk.js",
     "static/media/marker.png": "/noodle/static/media/marker.fa2f415453c3b6091b96.png",
     "index.html": "/noodle/index.html",
     "main.d104b4a3.css.map": "/noodle/static/css/main.d104b4a3.css.map",
-    "main.20592b7f.js.map": "/noodle/static/js/main.20592b7f.js.map",
+    "main.ed631f6b.js.map": "/noodle/static/js/main.ed631f6b.js.map",
     "453.82d5c573.chunk.js.map": "/noodle/static/js/453.82d5c573.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d104b4a3.css",
-    "static/js/main.20592b7f.js"
+    "static/js/main.ed631f6b.js"
   ]
 }
